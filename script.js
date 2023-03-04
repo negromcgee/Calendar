@@ -40,4 +40,11 @@ const four = localStorage.getItem('hour4');
 const five = localStorage.getItem('hour5');
   //
   // TODO: Add code to display the current date in the header of the page.
+const header = document.querySelector('header');
+const currentDate = dayjs();
+const dateString = currentDate.format('MMMM D, YYYY');
+const dateTextNode = document.createTextNode(dateString);
+const dateHeader = document.querySelector('#date-header');
+dateHeader.appendChild(dateTextNode);
+header.appendChild(dateHeader);
 });
