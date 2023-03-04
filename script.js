@@ -9,11 +9,12 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-const button = document.querySelector('#my-button');
+const saveButton = document.querySelector('#save-button');
 
-button.addEventListener('click', function() {
+saveButton.addEventListener('click', function() {
   console.log('Button clicked!');
 });
+
 
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -21,10 +22,22 @@ button.addEventListener('click', function() {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+  const now = dayjs();
+  const currentHour = now.hour().toString().padStart(2, '0');
+  console.log(currentHour);
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+const nine = localStorage.getItem('hour9');
+const ten = localStorage.getItem('hour10');
+const eleven = localStorage.getItem('hour11');
+const twelve = localStorage.getItem('hour12');
+const one = localStorage.getItem('hour1');
+const two = localStorage.getItem('hour2');
+const three = localStorage.getItem('hour3');
+const four = localStorage.getItem('hour4');
+const five = localStorage.getItem('hour5');
   //
   // TODO: Add code to display the current date in the header of the page.
 });
